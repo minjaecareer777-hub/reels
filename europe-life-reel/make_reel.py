@@ -17,7 +17,7 @@ import sys
 
 import cv2
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 from globe import Globe, great_circle, ease_in_out, ease_out, W, H
 
@@ -211,15 +211,15 @@ def stamp_layer(time_txt, place, country, y=300):
         d.text((x, ry), c, font=f_p, fill=(255, 255, 255, 245))
         x += f_p.getlength(c) + track
     alpha = fg.getchannel("A")
-    soft = alpha.filter(ImageFilter.GaussianBlur(14)).point(lambda v: min(255, int(v * 2.2)))
-    tight = alpha.filter(ImageFilter.GaussianBlur(3)).point(lambda v: min(255, int(v * 1.5)))
-    comb = Image.fromarray(np.maximum(np.asarray(soft) * 0.66, np.asarray(tight) * 0.92).astype(np.uint8))
+    soft = alpha.filter(ImageFilter.GaussianBlur(14)).point(lambda v: min(255, int(v * 3.0)))
+    tight = alpha.filter(ImageFilter.GaussianBlur(4)).point(lambda v: min(255, int(v * 1.6)))
+    comb = Image.fromarray(np.maximum(np.asarray(soft) * 0.70, np.asarray(tight) * 0.90).astype(np.uint8))
     sh = Image.new("RGBA", (bw, bh), (0, 0, 0, 0))
     sh.putalpha(comb)
     return Layer(Image.alpha_composite(sh, fg), W // 2 - bw // 2, y - pad)
 
 
-def bilingual(ko, ja, y, ko_size=64, ja_size=50, gap=18, shadow=1.3):
+def bilingual(ko, ja, y, ko_size=64, ja_size=48, gap=18, shadow=1.3):
     lines = []
     for i, part in enumerate(ko.split("\n")):
         lines.append(dict(text=part, font="ko_serif_b", size=ko_size, gap=6))
@@ -258,15 +258,15 @@ def video_frames(path, start, n, cx=0.5, cy=0.5, speed=1.0, zoom=(1.0, 1.0), sca
     raw = subprocess.run(cmd, stdout=subprocess.PIPE, check=True).stdout
     bw, bh = int(ow * z / 2) * 2, int(oh * z / 2) * 2
     got = len(raw) // (bw * bh * 3)
-    if got == 0:
-        raise RuntimeError(f"no frames decoded from {path} at {start}")
+    if got < n:
+        raise RuntimeError(f"{path}: only {got} of {n} frames available from {start}s; lower 'start'")
     arr = np.frombuffer(raw[:got * bw * bh * 3], dtype=np.uint8).reshape(got, bh, bw, 3)
     out = []
     for i in range(n):
         fr = arr[min(i, got - 1)]
         s = i / max(1, n - 1)
         zz = zoom[0] + (zoom[1] - zoom[0]) * s
-        out.append(_zoom_crop(fr, zz / z, ow, oh))
+        out.append(_zoom_crop(fr, 1.0 / zz, ow, oh))
     return out
 
 
@@ -281,11 +281,19 @@ def _zoom_crop(img, rel, ow, oh, px=0.0, py=0.0):
     return cv2.warpAffine(img, M, (ow, oh), flags=cv2.INTER_LINEAR | cv2.WARP_INVERSE_MAP, borderMode=cv2.BORDER_REFLECT)
 
 
-def photo_frames(path, n, cx=0.5, cy=0.5, zoom=(1.06, 1.16), pan=(0.0, 0.0), scale=1.0):
+def photo_frames(path, n, cx=0.5, cy=0.5, zoom=(1.06, 1.16), pan=(0.0, 0.0), scale=1.0, blur=None):
+    """Ken Burns frames from a still. blur: a list of polygons, each [[x, y], ...] in fractions
+    of the image, softened so small text in that area (a screen, a sign) cannot be read."""
     ow, oh = int(W * scale), int(H * scale)
     Image.MAX_IMAGE_PIXELS = None
-    im = Image.open(path).convert("RGB")
+    im = ImageOps.exif_transpose(Image.open(path)).convert("RGB")
     iw, ih = im.size
+    for poly in (blur or []):
+        r = max(4, int(iw * 0.0045))
+        soft = im.filter(ImageFilter.GaussianBlur(r))
+        mask = Image.new("L", im.size, 0)
+        ImageDraw.Draw(mask).polygon([(int(x * iw), int(y * ih)) for x, y in poly], fill=255)
+        im = Image.composite(soft, im, mask.filter(ImageFilter.GaussianBlur(max(2, r // 3))))
     cw = min(iw, ih * 9 / 16)
     ch = min(ih, iw * 16 / 9)
     x0 = max(0, min(iw - cw, cx * iw - cw / 2))
@@ -390,7 +398,7 @@ def build(tl, scale=1.0, only_frames=None, log=lambda *a: print(*a, flush=True))
     end_layer = bilingual(en["ko"], en["ja"], en.get("y", 800), ko_size=en.get("ko_size", 70), ja_size=en.get("ja_size", 46), gap=22)
     cta_layer = text_block([
         dict(text=en["cta_ko"], font="ko_sans", size=54, gap=14),
-        dict(text=en["cta_ja"], font="ja_sans", size=42, fill=(255, 255, 255, 244)),
+        dict(text=en["cta_ja"], font="ja_sans", size=38, fill=(255, 255, 255, 244)),
     ], W // 2, en.get("cta_y", 1120))
     end_stamp = stamp_layer(en["time"], en["place"].upper(), en["country"]) if en.get("time") else None
 
@@ -471,10 +479,10 @@ def build(tl, scale=1.0, only_frames=None, log=lambda *a: print(*a, flush=True))
             L.y = int(y - h_ / 2 + p.get("dy", 0))
             L.blit(fr, a)
         fr *= scrim(fr.shape, top=0.0, bottom=0.0)
-        a = fade(t, hk.get("text_t0", 0.15), hook_d - g["zoom_d"] * 0.6, 0.3, 0.2)
+        a = fade(t, hk.get("text_t0", 0.0), hook_d - g["zoom_d"], 0.3, 0.2)
         hook_layer.blit(fr, a, dy=(1 - min(1, a)) * 14)
         if reply_layer is not None:
-            a2 = fade(t, hk.get("reply_t0", 1.5), hook_d - g["zoom_d"] * 0.6, 0.22, 0.2)
+            a2 = fade(t, hk.get("reply_t0", 1.5), hook_d - g["zoom_d"], 0.22, 0.2)
             reply_layer.blit(fr, a2, dy=(1 - min(1, a2)) * 12)
         if tz > 0.45:
             w_ = ((tz - 0.45) / 0.55) ** 1.6
@@ -515,16 +523,13 @@ def build(tl, scale=1.0, only_frames=None, log=lambda *a: print(*a, flush=True))
         gz = tuple(c.get("zoom", (1.0, 1.05) if c["kind"] == "video" else (1.05, 1.15)))
         if c["kind"] == "video":
             return video_frames(path, c.get("start", 0.0), n, c.get("cx", 0.5), c.get("cy", 0.5), c.get("speed", 1.0), gz)
-        return photo_frames(path, n, c.get("cx", 0.5), c.get("cy", 0.5), gz, tuple(c.get("pan", (0.0, 0.0))))
+        return photo_frames(path, n, c.get("cx", 0.5), c.get("cy", 0.5), gz, tuple(c.get("pan", (0.0, 0.0))), blur=c.get("blur"))
 
-    idx = hook_n
+    bounds = [int(round((hook_d + P * k) * FPS)) for k in range(len(cuts) + 1)]
     for ci, c in enumerate(cuts):
-        t_start = hook_d + P * ci
-        f0 = int(round(t_start * FPS))
-        f1 = int(round((t_start + P) * FPS))
+        f0, f1 = bounds[ci], bounds[ci + 1]
         n = f1 - f0
         if only_frames is not None and not any(f0 <= k < f1 for k in only_frames):
-            idx = f1
             continue
         frames = load(c, n)
         gp = c.get("grade", {})
@@ -547,11 +552,10 @@ def build(tl, scale=1.0, only_frames=None, log=lambda *a: print(*a, flush=True))
                 a = fade(t, st0 + 0.04, st1, 0.2, 0.14)
                 L.blit(fr, a, dy=(1 - min(1, a)) * 12)
             emit(i, fr)
-        idx = f1
         log(f"cut {ci + 1}/{len(cuts)} {c['time']} {c['place']}  rss={_rss_mb()}MB")
 
     # ---------- ending
-    f0 = int(round((hook_d + P * len(cuts)) * FPS))
+    f0 = bounds[-1]
     n = nf_total - f0
     if only_frames is None or any(k >= f0 for k in only_frames):
         ec = en["clip"]
@@ -626,7 +630,7 @@ def mux(tl, video, total, out):
     af = (f"[1:a]atrim=start={m['start']}:duration={total},asetpts=PTS-STARTPTS,"
           f"afade=t=in:st=0:d={m.get('fade_in', 0.25)},afade=t=out:st={total - fo}:d={fo},volume={m.get('gain', 1.0)}[mu];"
           f"[2:a]adelay={delay}|{delay},volume={m.get('whoosh_gain', 0.5)}[wh];"
-          f"[mu][wh]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]")
+          f"[mu][wh]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000,asetpts=N/SR/TB[a]")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", video, "-i", music, "-i", wh, "-filter_complex", af,
                     "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "256k", "-t", f"{total:.3f}",
                     "-movflags", "+faststart", out], check=True)

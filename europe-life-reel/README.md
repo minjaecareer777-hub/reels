@@ -18,11 +18,11 @@ A 20.6 s vertical reel (1080×1920, 30 fps) for Korean and Japanese viewers.
 
 | Time | Section | On screen |
 |---|---|---|
-| 0.0–3.0 s | Hook | Globe from East Asia to Europe; "화요일 아침 7시, 오늘도 지옥철 안 / 火曜の朝7時、今日も満員電車に揺られてる", then "거기 7시는 어떨까 / 向こうの朝7時は" |
+| 0.0–3.0 s | Hook | Globe from East Asia to Europe; "화요일 아침 7시, 오늘도 지옥철 안 / 火曜の朝7時 今日も満員電車に揺られてる", then "거기 7시는 어떨까 / 向こうの朝7時は" |
 | 3.0–16.7 s | Montage | 16 cuts, one every two beats (0.857 s), each stamped with a clock time, flag and place; five bilingual lines, each held for three cuts |
 | 16.7–20.6 s | Ending | Aurora over Lapland; "여행이 아니라 그냥 화요일이라면" and the profile-link line |
 
-Every place label is the real location of that shot (see `CREDITS.md`).
+Every place label is the real location of that shot (see `CREDITS.md`). The clock times are staged: the shots come from different days and seasons, and the caption says so.
 
 ## Re-rendering
 
@@ -38,7 +38,7 @@ Emoji in copy are drawn with Noto Color Emoji (`/usr/share/fonts/truetype/noto/N
 ### Changing things in `timeline.json`
 
 - **Copy**: `hook`, `subtitles[]`, `ending` hold the Korean (`ko`) and Japanese (`ja`) text; `\n` breaks a line.
-- **A cut**: each entry in `cuts[]` has `time`, `place`, `country` (`CH` / `FI`), `src`, the crop centre `cx` / `cy` (0–1) and the `zoom` start/end. Videos also take `start` (seconds).
+- **A cut**: each entry in `cuts[]` has `time`, `place`, `country` (`CH` / `FI`), `src`, the crop centre `cx` / `cy` (0–1) and the `zoom` start/end. Videos also take `start` (seconds). Optional: `grade` (exposure / warmth / sat), `scrim_top` / `scrim_mid` (darken behind the stamp / subtitle), `blur` (polygons to soften, e.g. a readable screen).
 - **Pace**: `cut_period` is two beats of the music (0.857 s at 140 BPM); `music.start` is chosen so the beat comes in exactly when the hook ends.
 - **Your own footage**: drop a vertical clip into `assets/clips/` and point a cut's `src` at it with `"kind": "video"`.
 

@@ -21,13 +21,17 @@
 旅行じゃなくて「暮らす」ほうが気になってきたら、
 何から調べればいいかは、プロフィールのリンクにまとめてあります。
 
-Photos: Richard Mortel (Helsinki Cathedral), Ninara (Riisitunturi) — CC BY 2.0 · Esaox (Lake Suvasvesi) — CC BY 4.0, via Wikimedia Commons
+※ 영상 속 시각은 연출이에요. 계절도 장소도 다른 날의 풍경을 하루처럼 이어 붙였습니다.
+※ 映像内の時刻は演出です。季節も場所も違う日の風景を、一日のようにつないでいます。
+
+Photos (cropped & colour-graded; Riisitunturi darkened): Richard Mortel — Helsinki Cathedral, Ninara — Riisitunturi · CC BY 2.0 (creativecommons.org/licenses/by/2.0) / Esaox — Sunset at lake Suvasvesi · CC BY 4.0 (creativecommons.org/licenses/by/4.0) · via Wikimedia Commons
 
 #유럽살이 #해외이민 #스위스 #海外移住 #北欧暮らし
 ```
 
 - **해시태그는 5개까지만.** 인스타그램은 2025년 12월부터 게시물·릴스당 해시태그를 5개로 제한합니다(캡션+댓글 합산).
 - **Photos 줄은 지우지 마세요.** CC BY 사진 3장의 저작자 표시 조건입니다. 캡션이 길면 첫 댓글로 옮겨도 됩니다.
+- **※ 줄도 남겨 두세요.** 영상의 시각 스탬프는 연출입니다. 한 장면씩 다른 계절·다른 날에 찍힌 풍경이고(예: 20시로 표시한 리시툰투리 설경은 실제로는 2월 오후 사진을 어둡게 보정), 라플란드의 겨울은 오후부터 깜깜합니다. 이주를 다루는 계정인 만큼 이 점을 밝혀 두는 편이 안전합니다.
 
 ## 언어별로 따로 올릴 때
 
@@ -41,6 +45,8 @@ Photos: Richard Mortel (Helsinki Cathedral), Ninara (Riisitunturi) — CC BY 2.0
 여행 말고 '사는 쪽'이 궁금해지면,
 뭐부터 알아볼지는 프로필 링크에 적어 뒀어요.
 
+※ 영상 속 시각은 연출이에요. 계절도 장소도 다른 날의 풍경을 하루처럼 이어 붙였습니다.
+
 #유럽살이 #해외이민 #해외살이 #스위스 #핀란드
 ```
 
@@ -53,6 +59,8 @@ Photos: Richard Mortel (Helsinki Cathedral), Ninara (Riisitunturi) — CC BY 2.0
 向こうにも月曜日はちゃんと来るんだろうけど。
 旅行じゃなくて「暮らす」ほうが気になってきたら、
 何から調べればいいかは、プロフィールのリンクにまとめてあります。
+
+※ 映像内の時刻は演出です。季節も場所も違う日の風景を、一日のようにつないでいます。
 
 #海外移住 #北欧暮らし #海外生活 #スイス #フィンランド
 ```
