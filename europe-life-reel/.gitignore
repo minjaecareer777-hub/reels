@@ -1,0 +1,5 @@
+assets/
+out/stills/
+out/*._video.mp4
+out/*.log
+__pycache__/

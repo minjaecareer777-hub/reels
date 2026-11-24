@@ -1,0 +1,390 @@
+{
+ "cut_period": 0.857142,
+ "sub_y": 1250,
+ "music": {
+  "src": "music/opalescent.mp3",
+  "start": 58.71,
+  "gain": 1.0,
+  "fade_in": 0.3,
+  "fade_out": 1.4,
+  "whoosh_gain": 0.55
+ },
+ "hook": {
+  "duration": 3.0,
+  "ko": "화요일 아침 7시,\n오늘도 지옥철 안",
+  "ja": "火曜の朝7時\n今日も満員電車に揺られてる",
+  "reply_ko": "거기 7시는 어떨까",
+  "reply_ja": "向こうの朝7時は",
+  "y": 215,
+  "reply_y": 655,
+  "reply_t0": 1.2,
+  "globe": {
+   "from": [
+    30,
+    128
+   ],
+   "to": [
+    52,
+    17
+   ],
+   "t0": 0.15,
+   "t1": 2.35,
+   "r0": 405,
+   "r1": 465,
+   "cy": 1290,
+   "zoom_d": 0.5,
+   "zoom_to": [
+    50,
+    14
+   ],
+   "route_t0": 0.25,
+   "route_t1": 2.2,
+   "routes": [
+    {
+     "from": [
+      37.57,
+      126.98
+     ],
+     "to": [
+      47.37,
+      8.54
+     ]
+    },
+    {
+     "from": [
+      35.68,
+      139.69
+     ],
+     "to": [
+      60.17,
+      24.94
+     ]
+    }
+   ],
+   "pins": [
+    {
+     "label": "Seoul",
+     "lat": 37.57,
+     "lon": 126.98,
+     "t0": 0.0,
+     "t1": 1.35,
+     "dx": -22,
+     "dy": 14
+    },
+    {
+     "label": "Tokyo",
+     "lat": 35.68,
+     "lon": 139.69,
+     "t0": 0.0,
+     "t1": 1.2,
+     "dx": 22,
+     "dy": 16
+    },
+    {
+     "label": "Switzerland",
+     "lat": 46.8,
+     "lon": 8.2,
+     "t0": 1.75,
+     "t1": 9,
+     "dx": -22,
+     "dy": 30,
+     "color": [
+      255,
+      226,
+      168
+     ]
+    },
+    {
+     "label": "Finland",
+     "lat": 62.5,
+     "lon": 26.0,
+     "t0": 1.95,
+     "t1": 9,
+     "dx": -22,
+     "dy": -26,
+     "color": [
+      255,
+      226,
+      168
+     ]
+    }
+   ]
+  },
+  "ko_size": 72,
+  "ja_size": 52
+ },
+ "cuts": [
+  {
+   "time": "07:00",
+   "place": "Zermatt",
+   "country": "CH",
+   "kind": "video",
+   "src": "clips/ch_matterhorn_night.mp4",
+   "start": 0.3,
+   "cx": 0.6,
+   "zoom": [
+    1.0,
+    1.06
+   ]
+  },
+  {
+   "time": "08:00",
+   "place": "Lake Lucerne",
+   "country": "CH",
+   "kind": "photo",
+   "src": "clips/ch_lucerne_sunrise.jpg",
+   "cx": 0.5,
+   "zoom": [
+    1.14,
+    1.05
+   ]
+  },
+  {
+   "time": "09:00",
+   "place": "On the train",
+   "country": "CH",
+   "kind": "photo",
+   "src": "clips/ch_train_laptop.jpg",
+   "cx": 0.5,
+   "zoom": [
+    1.04,
+    1.12
+   ],
+   "scrim_top": 0.55
+  },
+  {
+   "time": "10:00",
+   "place": "Lauterbrunnen",
+   "country": "CH",
+   "kind": "photo",
+   "src": "clips/ch_lauterbrunnen_train.jpg",
+   "cx": 0.52,
+   "zoom": [
+    1.04,
+    1.15
+   ],
+   "scrim_mid": 0.28
+  },
+  {
+   "time": "11:00",
+   "place": "Lucerne",
+   "country": "CH",
+   "kind": "photo",
+   "src": "clips/ch_lucerne_reuss.jpg",
+   "cx": 0.72,
+   "zoom": [
+    1.15,
+    1.05
+   ]
+  },
+  {
+   "time": "12:00",
+   "place": "Lake Brienz",
+   "country": "CH",
+   "kind": "photo",
+   "src": "clips/ch_brienz_steamer.jpg",
+   "cx": 0.5,
+   "zoom": [
+    1.04,
+    1.14
+   ],
+   "scrim_mid": 0.28
+  },
+  {
+   "time": "13:00",
+   "place": "Seealpsee",
+   "country": "CH",
+   "kind": "photo",
+   "src": "clips/ch_seealpsee.jpg",
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.16,
+    1.05
+   ]
+  },
+  {
+   "time": "14:00",
+   "place": "Swiss Alps",
+   "country": "CH",
+   "kind": "video",
+   "src": "clips/ch_alps_clouds.mp4",
+   "start": 3.0,
+   "cx": 0.42,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "scrim_mid": 0.28
+  },
+  {
+   "time": "15:00",
+   "place": "Grindelwald",
+   "country": "CH",
+   "kind": "photo",
+   "src": "clips/ch_grindelwald_eiger.jpg",
+   "cx": 0.27,
+   "zoom": [
+    1.04,
+    1.15
+   ]
+  },
+  {
+   "time": "16:00",
+   "place": "Lake Biel",
+   "country": "CH",
+   "kind": "photo",
+   "src": "clips/ch_bielersee_vineyard.jpg",
+   "cx": 0.72,
+   "zoom": [
+    1.15,
+    1.05
+   ]
+  },
+  {
+   "time": "17:00",
+   "place": "Helsinki",
+   "country": "FI",
+   "kind": "photo",
+   "src": "clips/fi_helsinki_cathedral.jpg",
+   "cx": 0.37,
+   "zoom": [
+    1.04,
+    1.15
+   ],
+   "scrim_mid": 0.28
+  },
+  {
+   "time": "18:00",
+   "place": "Tammela",
+   "country": "FI",
+   "kind": "photo",
+   "src": "clips/fi_tammela_sauna.jpg",
+   "cx": 0.4,
+   "zoom": [
+    1.04,
+    1.14
+   ],
+   "scrim_top": 0.62,
+   "scrim_mid": 0.22
+  },
+  {
+   "time": "19:00",
+   "place": "Lake Suvasvesi",
+   "country": "FI",
+   "kind": "photo",
+   "src": "clips/fi_suvasvesi_sunset.jpg",
+   "cx": 0.36,
+   "zoom": [
+    1.15,
+    1.05
+   ],
+   "scrim_top": 0.5
+  },
+  {
+   "time": "20:00",
+   "place": "Riisitunturi",
+   "country": "FI",
+   "kind": "photo",
+   "src": "clips/fi_riisitunturi.jpg",
+   "cx": 0.64,
+   "zoom": [
+    1.04,
+    1.15
+   ],
+   "scrim_mid": 0.34,
+   "grade": {
+    "exposure": 0.72,
+    "warmth": -0.05,
+    "sat": 0.95
+   },
+   "scrim_top": 0.45
+  },
+  {
+   "time": "21:00",
+   "place": "Posio, Lapland",
+   "country": "FI",
+   "kind": "photo",
+   "src": "clips/fi_riisitunturi_reindeer.jpg",
+   "cx": 0.48,
+   "zoom": [
+    1.14,
+    1.05
+   ],
+   "scrim_mid": 0.26
+  },
+  {
+   "time": "22:00",
+   "place": "Hämeenlinna",
+   "country": "FI",
+   "kind": "photo",
+   "src": "clips/fi_hame_castle_snow.jpg",
+   "cx": 0.6,
+   "zoom": [
+    1.04,
+    1.14
+   ],
+   "scrim_mid": 0.3
+  }
+ ],
+ "subtitles": [
+  {
+   "from_cut": 1,
+   "to_cut": 3,
+   "ko": "출근길 창밖이 알프스라면",
+   "ja": "通勤電車からアルプスが見えたら"
+  },
+  {
+   "from_cut": 4,
+   "to_cut": 6,
+   "ko": "점심은 편의점 말고 호숫가",
+   "ja": "お昼は、デスクを離れて湖畔で"
+  },
+  {
+   "from_cut": 7,
+   "to_cut": 9,
+   "ko": "별일 없는 화요일 오후",
+   "ja": "なんでもない火曜の午後"
+  },
+  {
+   "from_cut": 10,
+   "to_cut": 12,
+   "ko": "퇴근하면 사우나부터",
+   "ja": "仕事帰りに、ふらっとサウナ"
+  },
+  {
+   "from_cut": 13,
+   "to_cut": 15,
+   "ko": "자기 전에 괜히 하늘 한번",
+   "ja": "寝る前に、いちおう空を見上げる"
+  }
+ ],
+ "ending": {
+  "duration": 3.9,
+  "time": "23:00",
+  "place": "Lapland",
+  "country": "FI",
+  "clip": {
+   "kind": "photo",
+   "src": "clips/fi_lapland_aurora.jpg",
+   "cx": 0.64,
+   "zoom": [
+    1.04,
+    1.2
+   ]
+  },
+  "ko": "여행이 아니라\n그냥 화요일이라면",
+  "ja": "これが旅行じゃなくて\nただの火曜日なら",
+  "cta_ko": "뭐부터 알아볼지는 프로필 링크에",
+  "cta_ja": "何から調べればいいかは、プロフのリンクに",
+  "ko_size": 74,
+  "ja_size": 52,
+  "y": 700,
+  "cta_y": 1150,
+  "line_t0": 0.45,
+  "cta_t0": 1.15,
+  "dim": 0.3,
+  "stamp_out": 1.1,
+  "fade_out": 0.3
+ }
+}

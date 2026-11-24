@@ -1,0 +1,231 @@
+{
+ "note": "Every asset used by make_reel.py, with its source and licence. Run fetch_assets.py to download them into ./assets (not committed).",
+ "photos": [
+  {
+   "file": "clips/ch_lucerne_sunrise.jpg",
+   "url": "https://pd.w.org/2023/06/289648201231c7945.41018016.jpeg",
+   "page": "https://wordpress.org/photos/photo/2896482012/",
+   "title": "A sunrise seen from a beach in Lucerne, Switzerland. With the mountain “Rigi” in the background.",
+   "author": "WordPress Photo Directory contributor",
+   "license": "CC0 1.0",
+   "place": "Lake Lucerne, Switzerland"
+  },
+  {
+   "file": "clips/ch_lauterbrunnen_train.jpg",
+   "url": "https://pd.w.org/2024/04/4176622bf38ec8f51.44361494.jpg",
+   "page": "https://wordpress.org/photos/photo/4176622bf3/",
+   "title": "A train going through a charming Swiss mountain village.",
+   "author": "WordPress Photo Directory contributor",
+   "license": "CC0 1.0",
+   "place": "Lauterbrunnen, Switzerland"
+  },
+  {
+   "file": "clips/ch_lucerne_reuss.jpg",
+   "url": "https://pd.w.org/2024/06/536666a132c37cb98.40054092.jpeg",
+   "page": "https://wordpress.org/photos/photo/536666a132/",
+   "title": "A long view of the kapellbrücke aka chapel bridge in the reuss river. From lucerne, switzerland.",
+   "author": "WordPress Photo Directory contributor",
+   "license": "CC0 1.0",
+   "place": "Lucerne, Switzerland"
+  },
+  {
+   "file": "clips/ch_brienz_steamer.jpg",
+   "url": "https://pd.w.org/2021/12/46261cc1d812a68f8.58089699.jpg",
+   "page": "https://wordpress.org/photos/photo/46261cc1d8/",
+   "title": "Paddle steamer approaching a pier on Lake Brienz, Switzerland",
+   "author": "WordPress Photo Directory contributor",
+   "license": "CC0 1.0",
+   "place": "Lake Brienz, Switzerland"
+  },
+  {
+   "file": "clips/ch_seealpsee.jpg",
+   "url": "https://pd.w.org/2022/07/15262bef8d546aa38.54914084.jpg",
+   "page": "https://wordpress.org/photos/photo/15262bef8d/",
+   "title": "Topside view of the Seealpsee, a lake in the Swiss mountains",
+   "author": "WordPress Photo Directory contributor",
+   "license": "CC0 1.0",
+   "place": "Seealpsee, Switzerland"
+  },
+  {
+   "file": "clips/ch_grindelwald_eiger.jpg",
+   "url": "https://pd.w.org/2026/06/6576a214556573ef3.25458358.jpg",
+   "page": "https://wordpress.org/photos/photo/6576a21455/",
+   "title": "Beautiful view of the mountains with snow and green fields. Grindelwald, Switzerland.",
+   "author": "WordPress Photo Directory contributor",
+   "license": "CC0 1.0",
+   "place": "Grindelwald, Switzerland"
+  },
+  {
+   "file": "clips/ch_bielersee_vineyard.jpg",
+   "url": "https://pd.w.org/2022/12/7316388c87905a426.99633512.jpg",
+   "page": "https://wordpress.org/photos/photo/7316388c87/",
+   "title": "Sunset view of autumnal vineyards and a church on the shores of a large lake (Lake Biel) in Switzerland.",
+   "author": "WordPress Photo Directory contributor",
+   "license": "CC0 1.0",
+   "place": "Lake Biel, Switzerland"
+  },
+  {
+   "file": "clips/fi_hame_castle_snow.jpg",
+   "url": "https://pd.w.org/2025/06/49268419adf101f88.89983694.jpg",
+   "page": "https://wordpress.org/photos/photo/49268419ad/",
+   "title": "Snowy walkway with lit streetlights next to the Castle of Häme, Finland.",
+   "author": "WordPress Photo Directory contributor",
+   "license": "CC0 1.0",
+   "place": "Hämeenlinna, Finland"
+  },
+  {
+   "file": "clips/fi_helsinki_cathedral.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Helsinki_Cathedral%2C_1852_%283%29_%2836689566175%29.jpg/3840px-Helsinki_Cathedral%2C_1852_%283%29_%2836689566175%29.jpg",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=69747961",
+   "title": "Helsinki Cathedral, 1852 (3) (36689566175)",
+   "author": "Richard Mortel from Riyadh, Saudi Arabia",
+   "license": "CC BY 2.0",
+   "place": "Helsinki, Finland"
+  },
+  {
+   "file": "clips/fi_riisitunturi.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Riisitunturi%2C_Finland_-_49651942441.jpg/3840px-Riisitunturi%2C_Finland_-_49651942441.jpg",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=137325906",
+   "title": "Riisitunturi, Finland - 49651942441",
+   "author": "Ninara",
+   "license": "CC BY 2.0",
+   "place": "Riisitunturi, Finland"
+  },
+  {
+   "file": "clips/fi_riisitunturi_reindeer.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Riisitunturi_National_Park%2C_Finland_%28Unsplash%29.jpg/3840px-Riisitunturi_National_Park%2C_Finland_%28Unsplash%29.jpg",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=62222664",
+   "title": "Riisitunturi National Park, Finland (Unsplash)",
+   "author": "Nathan Lemon processrepeat",
+   "license": "CC0 1.0",
+   "place": "Riisitunturi, Finland"
+  },
+  {
+   "file": "clips/fi_suvasvesi_sunset.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Sunset_at_lake_Suvasvesi%2C_Finland.jpg/3840px-Sunset_at_lake_Suvasvesi%2C_Finland.jpg",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=174765207",
+   "title": "Sunset at lake Suvasvesi, Finland",
+   "author": "Esaox",
+   "license": "CC BY 4.0",
+   "place": "Lake Suvasvesi, Finland"
+  },
+  {
+   "file": "clips/fi_lapland_aurora.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aurora_borealis_over_Lapland_%28Unsplash%29.jpg/3840px-Aurora_borealis_over_Lapland_%28Unsplash%29.jpg",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=61916445",
+   "title": "Aurora borealis over Lapland (Unsplash)",
+   "author": "Vincent Guth vingtcent",
+   "license": "CC0 1.0",
+   "place": "Lapland, Finland"
+  },
+  {
+   "file": "clips/ch_train_laptop.jpg",
+   "url": "https://pd.w.org/2023/08/35164d369562b3061.28033001-rotated.jpeg",
+   "page": "https://wordpress.org/photos/photo/35164d3695/",
+   "title": "Travelling on the train with a laptop on a rainy day in Switzerland. A view out the window of a body of water with low c",
+   "author": "WordPress Photo Directory contributor",
+   "license": "CC0 1.0",
+   "place": "On a train in Switzerland"
+  },
+  {
+   "file": "clips/fi_tammela_sauna.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Eerikkil%C3%A4%2C_Tammela%2C_Finland_%2803%29.jpg/3840px-Eerikkil%C3%A4%2C_Tammela%2C_Finland_%2803%29.jpg",
+   "page": "https://commons.wikimedia.org/w/index.php?curid=93278430",
+   "title": "Eerikkilä, Tammela, Finland (03)",
+   "author": "Kanta-Hämeen kuvapankki",
+   "license": "CC0 1.0",
+   "place": "Eerikkilä, Tammela, Finland"
+  }
+ ],
+ "videos": [
+  {
+   "file": "clips/ch_matterhorn_night.mp4",
+   "url": "https://assets.mixkit.co/videos/4281/4281-2160.mp4",
+   "page": "https://mixkit.co/free-stock-video/matterhorn-mountain-landscape-4281/",
+   "title": "Matterhorn Mountain Landscape",
+   "author": "Mixkit",
+   "license": "Mixkit Stock Video Free License",
+   "place": "Zermatt, Switzerland",
+   "referer": "https://mixkit.co/"
+  },
+  {
+   "file": "clips/ch_alps_clouds.mp4",
+   "url": "https://assets.mixkit.co/videos/4282/4282-2160.mp4",
+   "page": "https://mixkit.co/free-stock-video/clouds-touching-the-tip-of-matterhorn-mountain-4282/",
+   "title": "Clouds touching the tip of Matterhorn Mountain",
+   "author": "Mixkit",
+   "license": "Mixkit Stock Video Free License",
+   "place": "Swiss Alps",
+   "referer": "https://mixkit.co/"
+  }
+ ],
+ "music": [
+  {
+   "file": "music/opalescent.mp3",
+   "url": "https://assets.mixkit.co/music/593/593.mp3",
+   "page": "https://mixkit.co/free-stock-music/mood/dreamy/",
+   "title": "Opalescent",
+   "author": "Eugenio Mininni",
+   "license": "Mixkit Stock Music Free License",
+   "referer": "https://mixkit.co/"
+  }
+ ],
+ "globe": [
+  {
+   "file": "globe/day.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Land_shallow_topo_2048.jpg/3840px-Land_shallow_topo_2048.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Land_shallow_topo_2048.jpg",
+   "title": "Blue Marble: Land Surface, Shallow Water, and Shaded Topography",
+   "author": "NASA Goddard Space Flight Center",
+   "license": "Public domain"
+  },
+  {
+   "file": "globe/night.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/BlackMarble20161km.jpg/3840px-BlackMarble20161km.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:BlackMarble20161km.jpg",
+   "title": "Black Marble 2016",
+   "author": "NASA Earth Observatory",
+   "license": "Public domain"
+  }
+ ],
+ "fonts": [
+  {
+   "npm": "@expo-google-fonts/noto-serif-kr",
+   "files": {
+    "package/600SemiBold/NotoSerifKR_600SemiBold.ttf": "fonts/NotoSerifKR_600SemiBold.ttf",
+    "package/700Bold/NotoSerifKR_700Bold.ttf": "fonts/NotoSerifKR_700Bold.ttf"
+   },
+   "license": "SIL OFL 1.1"
+  },
+  {
+   "npm": "@expo-google-fonts/noto-serif-jp",
+   "files": {
+    "package/500Medium/NotoSerifJP_500Medium.ttf": "fonts/NotoSerifJP_500Medium.ttf",
+    "package/700Bold/NotoSerifJP_700Bold.ttf": "fonts/NotoSerifJP_700Bold.ttf"
+   },
+   "license": "SIL OFL 1.1"
+  },
+  {
+   "npm": "@expo-google-fonts/montserrat",
+   "files": {
+    "package/600SemiBold/Montserrat_600SemiBold.ttf": "fonts/Montserrat_600SemiBold.ttf",
+    "package/800ExtraBold/Montserrat_800ExtraBold.ttf": "fonts/Montserrat_800ExtraBold.ttf"
+   },
+   "license": "SIL OFL 1.1"
+  },
+  {
+   "npm": "pretendard",
+   "files": {
+    "package/dist/public/static/Pretendard-SemiBold.otf": "fonts/Pretendard-SemiBold.otf"
+   },
+   "license": "SIL OFL 1.1"
+  },
+  {
+   "npm": "pretendard-jp",
+   "files": {
+    "package/dist/public/static/PretendardJP-SemiBold.otf": "fonts/PretendardJP-SemiBold.otf"
+   },
+   "license": "SIL OFL 1.1"
+  }
+ ]
+}
